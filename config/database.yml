@@ -12,7 +12,7 @@ development:
   database: myrun_development
   pool: 5
   username: root
-  password:
+  password: int3rc3pt0r
   socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
@@ -25,7 +25,7 @@ test:
   database: myrun_test
   pool: 5
   username: root
-  password:
+  password: int3rc3pt0r
   socket: /tmp/mysql.sock
 
 production:
@@ -35,5 +35,5 @@ production:
   database: myrun_production
   pool: 5
   username: root
-  password:
+  password: int3rc3pt0r
   socket: /tmp/mysql.sock
