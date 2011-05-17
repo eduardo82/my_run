@@ -1,6 +1,13 @@
 class UsersController < ApplicationController
+  
+  skip_before_filter :authenticate
+  
   def index
     @users = User.all
+  end
+  
+  def personal_index
+    @user = User.find_by_username_and_userpass(params[:username],[:userpass])
   end
 
   def show
