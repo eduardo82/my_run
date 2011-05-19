@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   end
   
   def personal_index
-    @user = User.find_by_username_and_userpass(params[:username],[:userpass])
+    @user = User.find_by_username_and_userpass(params[:username],params[:userpass])
   end
 
   def show

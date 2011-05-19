@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
+  helper :all
   before_filter :authenticate
   helper_method :session_user
   protected 
@@ -14,7 +15,7 @@ class ApplicationController < ActionController::Base
   def authenticate
     unless session[:user]
       session[:return_to] = request.request_uri
-      redirect_to :controller => "logon", :action => "login"
+      render :controller => "logon", :action => "login"
       return false
     end
     return true

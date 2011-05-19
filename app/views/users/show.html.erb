@@ -30,7 +30,7 @@
 			<th>Calorias</th>
 		</tr>
 		<% @runs = Run.find_all_by_user_id(@user.id) %>
-			<% @runs.each do |runs|%>
+			<% @runs.each do |runs| %>
 				<tr align="center">
 					<td><%= runs.day.strftime("%d/%m/%Y") %></td>
 					<td><%= runs.distance %></td>
