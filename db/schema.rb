@@ -10,15 +10,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110514143351) do
+ActiveRecord::Schema.define(:version => 20110519024413) do
 
   create_table "runs", :force => true do |t|
     t.integer  "user_id"
     t.float    "distance"
     t.date     "day"
-    t.time     "alltime"
+    t.integer  "alltime"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "average"
+    t.float    "calories"
   end
 
   create_table "users", :force => true do |t|

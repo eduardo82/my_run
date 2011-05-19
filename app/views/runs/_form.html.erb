@@ -11,18 +11,17 @@
       </ul>
     </div>
   <% end %>
-
   <div class="field">
-    <%= f.label :distance %><br />
+    Distância (metros)<br />
     <%= f.text_field :distance %>
-  </div>
+  </div><br />
   <div class="field">
-    <%= f.label :day %><br />
-    <%= f.date_select :day %>
-  </div>
+    Data<br />
+    <%= f.date_select :day, :order => [:day, :month, :year] %>
+  </div><br />
   <div class="field">
-    <%= f.label :alltime %><br />
-    <%= f.time_select :alltime %>
+    Tempo Gasto (minutos)<br />
+    <%= f.text_field :alltime %>
   </div>
   <div class="actions">
     <%= f.submit %>
