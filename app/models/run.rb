@@ -1,10 +1,10 @@
 class Run < ActiveRecord::Base
   belongs_to :user
-  after_save :calc_average
-  
-  
-  def calc_average
-    self.update_attributes(:average => self.distance * 4)
-    self.update_attributes(:calories => self.distance * 3)
-  end
+  before_create :calc_average
+
+   def calc_average
+     self.average = self.distance
+     self.update_attributes(:average => self.average)
+     return self.average
+   end
 end
