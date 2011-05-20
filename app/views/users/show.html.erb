@@ -1,4 +1,5 @@
-<h1>My Profile</h1><br />
+<div id="contents">
+<h1>Meus Treinos</h1><br />
 
 <p id="notice"><%= notice %></p>
 
@@ -26,27 +27,30 @@
 		<tr>
 			<th>Data da Corrida</th>
 			<th>Distância Km</th>
+			<th>Tempo Min</th>
 			<th>Média Km/Min</th>
 			<th>Calorias</th>
 		</tr>
 		<% @runs = Run.find_all_by_user_id(@user.id) %>
 			<% @runs.each do |runs| %>
 				<tr align="center">
-					<td><%= runs.day.strftime("%d/%m/%Y") %></td>
+					<td><%= runs.created_at.strftime("%d/%m/%Y") %></td>
 					<td><%= runs.distance %></td>
-					<td></td>
-					<td></td>
+					<td><%= runs.alltime %></td>
+					<td><%= runs.average %></td>
+					<td><%= runs.calories %></td>
 				</tr>	
 			<% end %>	
 	</table>
 	<div id="total">
 		<p>
-			<b>Total Semana: </b><br />
+			<b>Total Semana: <%= calc_week %></b><br />
 			<b>Total Mês: <%= calc_month %></b><br />
-			<b>Total Ano:</b><br />
+			<b>Total Ano: <%= calc_year %></b><br />
 			<b>Total: <%= calc_total %></b><br />
 		</p>
 	</div>
 </div><br />
 <%= link_to 'New Runs', new_run_path(@run, :user_id => @user.id) %> |
-<%= link_to 'Edit', edit_user_path(@user) %>
+<%= link_to 'Edit User', edit_user_path(@user) %>
+</div>

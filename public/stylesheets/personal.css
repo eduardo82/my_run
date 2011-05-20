@@ -1,0 +1,28 @@
+#background {
+	background-color: gray;
+}
+#login {
+	position: absolute;
+	top: 200px;
+	left: 450px;
+	font-family: 'courier';
+	border: solid;
+	background-color: white;
+	padding-left: 3cm;
+	padding-right: 3cm;
+	border-color: white;
+}
+
+/* Conteúdos principais*/
+#contents{
+	position: absolute;
+	top: 100px;
+	left: 50px;
+	border: solid;
+	border-color: white;
+	background-color: white;
+	padding-right: 2cm;
+	padding-left: 0.5cm;
+	padding-bottom: 0.3cm;
+	width: 28cm; /* Comprimento do bloco */
+}

@@ -1,6 +1,6 @@
-<h1>Logon#login</h1>
+<div id="login">
+<h1>Login</h1>
 <%= form_tag :action => "login" %> 
-
 	<div class="field">
 		Username:<br />
 		<%= text_field_tag :username, params[:username] %> 
@@ -12,5 +12,5 @@
 	<div class="actions">
 		<%= submit_tag "Sign in" %> | <%= link_to 'SignUp', new_user_path %>
 	</div>
-
+</div>
 
