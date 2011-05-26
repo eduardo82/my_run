@@ -1,13 +1,9 @@
 class ChangetypeAlltime < ActiveRecord::Migration
-  def self.up
-     change_table :runs do |t|
-       t.change :alltime, :integer
-     end
+  def self.up     
+       change_column :runs, :alltime, :integer
    end
 
   def self.down
-    change_table :runs do |t|
-      t.change :alltime, :float
-    end
+    change_column :runs, :alltime, :float
   end
 end
