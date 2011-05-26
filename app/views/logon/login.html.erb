@@ -6,11 +6,10 @@
 		<%= text_field_tag :username, params[:username] %> 
 	</div>
 	<div class="field"> 
-		Password:<br /> 
+		Password:<br />
 		<%= password_field_tag :userpass, params[:userpass] %>
 	</div> 
 	<div class="actions">
 		<%= submit_tag "Sign in" %> | <%= link_to 'SignUp', new_user_path %>
 	</div>
 </div>
-

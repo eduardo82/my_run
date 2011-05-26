@@ -2,12 +2,23 @@
 <html>
 <head>
   <title>Myrun</title>
+	<script src='javascripts/application.js'></script>
+	<script src='javascripts/jquery.js'></script>
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
-<body id="background">
-
+<body background="#C8D2D9">
+<div id="menu">
+	<ul>
+		<% if session[:user] %>
+			<li><%= link_to 'Home' %><li>
+				<li><%= link_to 'MyRuns'  %><li>
+		<% end %>	
+		<li><%= link_to 'Login',  :controller => 'logon', :action => "login" %></li>
+		<li><%= link_to 'Logout', :controller => 'logon', :action => "logout"  %></li>
+	</ul>
+</div>
 <%= yield %>
 
 </body>

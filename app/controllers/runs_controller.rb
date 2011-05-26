@@ -1,5 +1,5 @@
 class RunsController < ApplicationController
-
+  skip_before_filter :authenticate
   def index
     @runs = Run.all
   end

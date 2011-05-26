@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   
-  skip_before_filter :authenticate
+  skip_before_filter :authenticate, :only => {:controller => "logon", :action => "login"}
   
   def index
     @users = User.all

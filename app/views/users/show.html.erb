@@ -2,7 +2,7 @@
 <h1>Meus Treinos</h1><br />
 
 <p id="notice"><%= notice %></p>
-
+<%= image_tag @user.photo.url(:small) %>
 <p>
   <b>Name:</b>
   <%= @user.name %>
@@ -35,7 +35,7 @@
 			<% @runs.each do |runs| %>
 				<tr align="center">
 					<td><%= runs.created_at.strftime("%d/%m/%Y") %></td>
-					<td><%= runs.distance %></td>
+					<td><%= runs.distance/1000%></td>
 					<td><%= runs.alltime %></td>
 					<td><%= runs.average %></td>
 					<td><%= runs.calories %></td>
@@ -44,10 +44,10 @@
 	</table>
 	<div id="total">
 		<p>
-			<b>Total Semana: <%= calc_week %></b><br />
-			<b>Total Mês: <%= calc_month %></b><br />
-			<b>Total Ano: <%= calc_year %></b><br />
-			<b>Total: <%= calc_total %></b><br />
+			<b>Total Semana: <%= calc_week %> metros</b><br />
+			<b>Total Mês: <%= calc_month %> metros</b><br />
+			<b>Total Ano: <%= calc_year %> metros</b><br />
+			<b>Total: <%= calc_total %> metros</b><br />
 		</p>
 	</div>
 </div><br />
