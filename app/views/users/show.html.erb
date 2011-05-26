@@ -2,7 +2,7 @@
 <h1>Meus Treinos</h1><br />
 
 <p id="notice"><%= notice %></p>
-<%= image_tag @user.photo.url(:small) %>
+<%= link_to image_tag @user.photo.url(:small) %>
 <p>
   <b>Name:</b>
   <%= @user.name %>
@@ -18,10 +18,6 @@
   <%= @user.username %>
 </p>
 
-<p>
-  <b>Userpass:</b>
-  <%= @user.userpass %>
-</p>
 <div id="table">
 	<table border=1>
 		<tr>

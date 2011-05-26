@@ -6,7 +6,6 @@
     <th>Name</th>
     <th>Email</th>
     <th>Username</th>
-    <th>Userpass</th>
 	<th>Picture</th>
     <th>Actions</th>
   </tr>
@@ -16,10 +15,8 @@
     <td><%= user.name %></td>
     <td><%= user.email %></td>
     <td><%= user.username %></td>
-    <td><%= user.userpass %></td>
-	<td><%= link_to 'View Resume', user.picture.url %></td>
+	<td><%= link_to image_tag user.photo.url(:small) %></td>
     <td><%= link_to 'Show', user %>
-   		<%= link_to 'Edit', edit_user_path(user) %>
     	<%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
